@@ -18,7 +18,22 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Akowe Prince - UI/UX Designer & Web Developer",
-  description: "Modern portfolio showcasing UI/UX design and web development expertise",
+  description: "Portfolio showcasing UI/UX design and web development",
+  openGraph: {
+    title: "Akowe Prince - UI/UX Designer & Web Developer",
+    description: "Portfolio showcasing UI/UX design and web development",
+    siteName: "Akowe Prince Portfolio",
+    images: [
+      {
+        url: "/prince.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Akowe Prince - UI/UX Designer & Web Developer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
