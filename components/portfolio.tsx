@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 export function Portfolio() {
@@ -12,64 +12,41 @@ export function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Dashboard",
-      category: "ui-design",
-      image: "/modern-ecommerce-dashboard.png",
+      title: "E-commerce Website",
+      categories: ["ui-design", "web-dev"],
+      image: "/morgan.png",
       description:
         "A comprehensive admin dashboard for managing online stores with analytics and inventory management.",
       technologies: ["Figma", "React", "TypeScript"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://morgan-one.vercel.app/",
     },
     {
       id: 2,
-      title: "Mobile Banking App",
-      category: "ui-design",
-      image: "/mobile-banking-app.png",
+      title: "Rosie",
+      categories: ["ui-design", "mobile-dev"],
+      image: "/rosie.png",
       description: "User-friendly mobile banking application with focus on security and accessibility.",
       technologies: ["Figma", "React Native", "Node.js"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl:
+        "https://www.figma.com/proto/xDeEbqBO7OwGwvWMU6MMVy/Portfolio-updates-copy--Copy-?node-id=3599-2530&p=f&t=j7WwlST4NcOw9SQp-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A2160",
     },
     {
       id: 3,
-      title: "SaaS Landing Page",
-      category: "web-dev",
-      image: "/modern-saas-landing-page.png",
+      title: "Tech Academy",
+      categories: ["web-dev"],
+      image: "/CCPLUS.png",
       description: "High-converting landing page for a B2B SaaS platform with integrated analytics.",
       technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://www.computercollegeplus.com/",
     },
     {
       id: 4,
-      title: "Task Management Tool",
-      category: "web-dev",
-      image: "/task-management-app.png",
+      title: "Acaciazone",
+      categories: ["ui-design", "web-dev"],
+      image: "/acacia.png",
       description: "Collaborative project management tool with real-time updates and team features.",
-      technologies: ["React", "Node.js", "MongoDB"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      id: 5,
-      title: "Restaurant Website",
-      category: "web-dev",
-      image: "/restaurant-website.png",
-      description: "Elegant restaurant website with online reservation system and menu management.",
-      technologies: ["Next.js", "Sanity CMS", "Stripe"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      id: 6,
-      title: "Fitness App Design",
-      category: "ui-design",
-      image: "/fitness-tracking-app.png",
-      description: "Motivational fitness tracking app with social features and workout plans.",
-      technologies: ["Figma", "Principle", "After Effects"],
-      liveUrl: "#",
-      githubUrl: "#",
+      technologies: ["Figma", "React", "Node.js", "MongoDB"],
+      liveUrl: "https://acacia-zone.vercel.app/",
     },
   ]
 
@@ -77,9 +54,11 @@ export function Portfolio() {
     { id: "all", label: "All Projects" },
     { id: "ui-design", label: "UI Design" },
     { id: "web-dev", label: "Web Development" },
+    { id: "mobile-dev", label: "Mobile Development" },
   ]
 
-  const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.category === filter)
+  const filteredProjects =
+    filter === "all" ? projects : projects.filter((project) => project.categories.includes(filter))
 
   return (
     <section id="portfolio" className="py-20 bg-card relative overflow-hidden">
@@ -220,13 +199,6 @@ export function Portfolio() {
                         <Button size="sm" variant="secondary" asChild>
                           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="h-4 w-4" />
-                          </a>
-                        </Button>
-                      </motion.div>
-                      <motion.div whileHover={{ scale: 1.2, rotateZ: -360 }} transition={{ duration: 0.3 }}>
-                        <Button size="sm" variant="secondary" asChild>
-                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                            <Github className="h-4 w-4" />
                           </a>
                         </Button>
                       </motion.div>

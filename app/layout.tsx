@@ -17,9 +17,8 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Alex Morgan - UI/UX Designer & Web Developer",
+  title: "Akowe Prince - UI/UX Designer & Web Developer",
   description: "Modern portfolio showcasing UI/UX design and web development expertise",
-  generator: "v0.app",
 }
 
 export default function RootLayout({

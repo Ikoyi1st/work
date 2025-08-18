@@ -1,26 +1,26 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import { Mail, MapPin, MessageCircle } from "lucide-react"
+import { Mail, MessageCircle, Phone } from "lucide-react"
 
 export function Contact() {
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      content: "princeik.akowe@gmail.com",
+      content: "Send me an email",
       href: "mailto:princeik.akowe@gmail.com",
     },
     {
       icon: <MessageCircle className="h-6 w-6" />,
       title: "WhatsApp",
-      content: "+234 806 578 9274",
+      content: "Message on WhatsApp",
       href: "https://wa.me/2348065789274",
     },
     {
-      icon: <MapPin className="h-6 w-6" />,
-      title: "Location",
-      content: "San Francisco, CA",
-      href: "#",
+      icon: <Phone className="h-6 w-6" />,
+      title: "Phone",
+      content: "Call me directly",
+      href: "tel:+2348065789274",
     },
   ]
 
@@ -48,7 +48,7 @@ export function Contact() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               <Button asChild size="lg" className="h-16 bg-primary hover:bg-primary/90">
                 <a href="mailto:princeik.akowe@gmail.com" className="flex items-center justify-center space-x-3">
                   <Mail className="h-6 w-6" />
@@ -70,6 +70,18 @@ export function Contact() {
                 >
                   <MessageCircle className="h-6 w-6" />
                   <span>WhatsApp</span>
+                </a>
+              </Button>
+
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="h-16 border-blue-500 text-blue-600 hover:bg-blue-50 bg-transparent"
+              >
+                <a href="tel:+2348065789274" className="flex items-center justify-center space-x-3">
+                  <Phone className="h-6 w-6" />
+                  <span>Call Now</span>
                 </a>
               </Button>
             </div>
