@@ -48,6 +48,24 @@ export function Portfolio() {
       technologies: ["Figma", "React", "Node.js", "MongoDB"],
       liveUrl: "https://acacia-zone.vercel.app/",
     },
+     {
+      id: 5,
+      title: "Morgan",
+      categories: ["wordpress"],
+      image: "/morg.png",
+      description: "Collaborative project management tool with real-time updates and team features.",
+      technologies: ["Elementor", "Wordpress", "PHP"],
+      liveUrl: "https://morganmobilehub.com/",
+    },
+     {
+      id: 6,
+      title: "Ecobarter",
+      categories: ["wordpress"],
+      image: "/ecobarter.png",
+      description: "Collaborative project management tool with real-time updates and team features.",
+      technologies: ["Elementor", "Wordpress", "PHP"],
+      liveUrl: "https://ecobarter.africa/",
+    },
   ]
 
   const categories = [
@@ -55,6 +73,7 @@ export function Portfolio() {
     { id: "ui-design", label: "UI Design" },
     { id: "web-dev", label: "Web Development" },
     { id: "mobile-dev", label: "Mobile Development" },
+    { id: "wordpress", label: "Wordpress Development" },
   ]
 
   const filteredProjects =
